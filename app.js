@@ -4,6 +4,8 @@ const session = require('express-session');
 const path = require('path');
 
 const app = express();
+app.set('view engine', 'ejs');
+app.set('views', './src/views');
 
 // Middleware
 app.use(express.json());
@@ -23,7 +25,7 @@ app.use('/auth', require('./src/routes/auth'));
 // Route dashboard (butuh login)
 const { isAuthenticated } = require('./src/middleware/auth');
 app.get('/dashboard', isAuthenticated, (req, res) => {
-  res.sendFile('dashboard.html', { root: './src/views/auth' });
+  res.render('auth/dashboard', { user: req.session.user });
 });
 
 // API: ambil data user dari session (untuk dashboard)
