@@ -3,7 +3,7 @@ const bcrypt = require('bcryptjs');
 
 // GET /auth/login - tampilkan halaman login
 const showLogin = (req, res) => {
-  res.sendFile('login.html', { root: './src/views/auth' });
+  res.render('auth/login');
 };
 
 // POST /auth/login - proses login
