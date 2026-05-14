@@ -1,8 +1,3 @@
--- =============================================
--- Database: fti_hc
--- Sesuai ERD dosen - Project Pemrograman Web
--- =============================================
-
 CREATE DATABASE IF NOT EXISTS fti_hc;
 USE fti_hc;
 
@@ -65,10 +60,6 @@ CREATE TABLE IF NOT EXISTS model_has_permissions (
   PRIMARY KEY (permission_id, model_id, model_type),
   FOREIGN KEY (permission_id) REFERENCES permissions(id) ON DELETE CASCADE
 );
-
--- =============================================
--- Data awal
--- =============================================
 
 -- Roles
 INSERT INTO roles (name, guard_name, created_at, updated_at) VALUES
