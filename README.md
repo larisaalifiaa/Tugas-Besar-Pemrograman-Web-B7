@@ -43,6 +43,6 @@ npm run dev
 │   ├── controllers/
 │   │   └── authController.js     # Logic autentikasi
 │   └── views/auth/
-│       ├── login.html            # Halaman login
-│       └── dashboard.html        # Halaman dashboard
+│       ├── login.ejs             # Halaman login
+│       └── dashboard.ejs         # Halaman dashboard
 ```
