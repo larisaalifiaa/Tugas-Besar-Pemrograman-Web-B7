@@ -1,0 +1,224 @@
+/* ===========================
+   FTI HC - Global Stylesheet
+   =========================== */
+
+/* --- Variables --- */
+:root {
+  --color-bg: #f5f5f5;
+  --color-white: #ffffff;
+  --color-black: #111111;
+  --color-dark: #333333;
+  --color-muted: #666666;
+  --color-border: #dddddd;
+  --color-badge-bg: #f0f0f0;
+  --color-badge-text: #333333;
+  --color-error-bg: #fee2e2;
+  --color-error-text: #b91c1c;
+  --color-navbar-muted: #aaaaaa;
+  --color-navbar-hover: #333333;
+
+  --radius-sm: 5px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-pill: 99px;
+
+  --shadow-card: 0 1px 8px rgba(0, 0, 0, 0.08);
+  --shadow-login: 0 2px 12px rgba(0, 0, 0, 0.1);
+
+  --font-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- Reset & Base --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-base);
+  background: var(--color-bg);
+  color: var(--color-black);
+}
+
+/* ===========================
+   LOGIN PAGE
+   =========================== */
+
+.page-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.login-card {
+  background: var(--color-white);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-login);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-card__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem;
+}
+
+.login-card__subtitle {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  margin: 0 0 1.5rem;
+}
+
+/* --- Form --- */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 500;
+  font-size: 0.875rem;
+  margin-bottom: 0.4rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  font-family: var(--font-base);
+  transition: border-color 0.15s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--color-black);
+}
+
+/* --- Buttons --- */
+.btn-primary {
+  display: block;
+  width: 100%;
+  padding: 0.6rem;
+  background: var(--color-black);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: var(--font-base);
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.15s ease;
+}
+
+.btn-primary:hover {
+  background: var(--color-dark);
+}
+
+/* --- Alert --- */
+.alert {
+  padding: 0.6rem 0.75rem;
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  display: none;
+}
+
+.alert--error {
+  background: var(--color-error-bg);
+  color: var(--color-error-text);
+}
+
+/* ===========================
+   NAVBAR
+   =========================== */
+
+.navbar {
+  background: var(--color-black);
+  color: var(--color-white);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__brand {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.navbar__right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar__username {
+  font-size: 0.85rem;
+  color: var(--color-navbar-muted);
+}
+
+.btn-logout {
+  background: transparent;
+  border: 1px solid #555;
+  color: var(--color-white);
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-family: var(--font-base);
+  transition: background 0.15s ease;
+}
+
+.btn-logout:hover {
+  background: var(--color-navbar-hover);
+}
+
+/* ===========================
+   DASHBOARD / CONTAINER
+   =========================== */
+
+.container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: 1.5rem;
+}
+
+.card__title {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.card__desc {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* --- Badge --- */
+.badge {
+  display: inline-block;
+  background: var(--color-badge-bg);
+  color: var(--color-badge-text);
+  padding: 0.2rem 0.7rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.78rem;
+  font-weight: 600;
+  margin-top: 0.75rem;
+  margin-right: 0.25rem;
+}

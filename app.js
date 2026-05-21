@@ -7,6 +7,9 @@ const app = express();
 app.set('view engine', 'ejs');
 app.set('views', './src/views');
 
+// Static files (CSS, JS, images)
+app.use(express.static(path.join(__dirname, 'public')));
+
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
